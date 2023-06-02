@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styl.css">
+    <style>
+        body{
+            background-color: darkslategrey;
+            text-align: center;
+        }
+      
+    </style>
+</head>
+<body >
+    <div id="title">Guess my Number(1-100)</div>
+    <hr>
+    <div class="container">
+        <div class="container1"></div>
+        <div class="container2">
+            <label for=""><b>Enter yor guessing number Number:</b></label><br>
+    <input type="number" placeholder="Enter your number"><br>
+    <button onclick="check()">check</button><br>
+    <b>Chances Left:</b><b></b><br>
+   <img src="./score.png" alt=""width="40px" height="30px"> <b ></b><br>
+    <mark></mark>
+   
+    <!-- <button onclick="play()">play again</button> -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- <script src="./test.js"></script> -->
+    <script>
+        let randomnumber=Math.random()*100+1
+   randomnumber=parseInt(randomnumber);
+  console.log(randomnumber)
+let count=100;
+let chances=document.getElementsByTagName("b")
+chances[1].style.color="yellow"
+chances[1].innerHTML=`Chances Left:`
+chances[2].style.color="white"
+chances[2].innerHTML=`${count}`
+function check(){
+let inputvl=document.querySelector("input");
+ if(inputvl.value>100){
+    window.alert("enter a number between 1 to 100")
+ }
+ if(inputvl.value==randomnumber){
+    <!-- console.log() -->
+    count--
+    chances[2].innerHTML=`${count}`
+
+   // document.querySelector('mark').style.color="red"
+    document.querySelector('mark').innerHTML=`  your guess ${randomnumber} is correct.. `
+    //window.confirm(` YOUR SCORE:${count}`)
+    document.querySelector('img').style.display="inline"
+  chances[3].style.color="orange"
+  
+    chances[3].innerHTML=` YOUR SCORE:${count}`
+    return 
+}
+
+else if(inputvl.value>randomnumber){
+    document.querySelector('mark').innerHTML=`  your guess is high.. `
+    count--
+    chances[2].innerHTML=`${count}`
+    
+}
+
+else{
+    document.querySelector('mark').innerHTML="your gues is low.."
+count--
+chances[2].innerHTML=`${count}`
+
+}
+}
+/*function play(){
+    let randomnumber=Math.random()*100+1
+    randomnumber=parseInt(randomnumber);
+   console.log(randomnumber)
+ let count=100;
+ let chances=document.getElementsByTagName("b")
+ chances[1].style.color="yellow"
+ chances[1].innerHTML=`chances:`
+ chances[2].style.color="white"
+ chances[2].innerHTML=`${count}`
+ 
+ check();
+}*/
+    </script>
+</body>
+</html>

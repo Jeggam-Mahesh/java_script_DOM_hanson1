@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styl.css" />
+  </head>
+  <body bgcolor="wheat">
+    <div id="title">* DOM HANDSON *</div>
+    >
+    <hr />
+    <p>Q1. Write the code to access element which is having id as "text" ?</p>
+    <pre>
+        let id=document.getElementById("text");
+        console.log(id);
+        console.log(id.innerText); 
+
+        OUTPUT:
+        < div id="text"> hello < /div>
+         Hello   
+
+    </pre>
+    <hr />
+    <p>Q2. Write the code to access element which is having tag as "h1" ?</p>
+    <pre>
+        HTML:  < h1 >This is heading tag< /h1>
+
+        JS:
+
+        let tag=document.getElementsByTagName("h1")
+        console.log(tag);
+        console.log(tag[0].innerText); 
+
+        OUTPUT:
+        HTMLCollection [h1]
+        This is heading tag
+
+    </pre>
+    <hr />
+    <p>Q3. Write the code to access element which is having tag as "h1" ?</p>
+    <pre>
+        HTML:  < div class="box"> this is box < /div>
+
+        JS:
+
+        let box=document.getElementsByClassName("box")
+        console.log(box);
+        console.log(box[0].innerText); 
+
+        OUTPUT:
+        HTMLCollection [div.box]
+        This is box
+
+    </pre>
+    <hr />
+    <p>
+      Q4. "< h1>Hello < /h1> Change the heading from ""Hello"" to ""Hello
+      World"" using DOM functions"
+    </p>
+    <h1>Hello</h1>
+    <hr />
+    <p>
+      Q5. Create an HTML page having content as Hello world and a button named
+      Replace Text. When user will click on this button page content should be
+      changed to "Welcome to Elevation academy"
+    </p>
+    <h2>Hello World</h2>
+    <button onclick="change()">Replace text</button>
+    <hr />
+    <p>
+      Q6. "< h1>Hello < /h1> Add one style attribute and give text color as red
+      and id attribute and give the id value as ""heading"" in the above given
+      h1 tag using DOM functions"
+    </p>
+    <h1 id="six">Hello</h1>
+    <hr />
+    <p>
+      Q7. Create three cards on HTML page and arrange them using flex property
+      in row or horizontal direction and also create button at the bottom named
+      "Change Flex direction". When user clicks on this button, the cards
+      arrangement should be changed to vertical direction.
+    </p>
+    <div class="parent">
+      <div class="child">1</div>
+      <div class="child">2</div>
+      <div class="child">3</div>
+    </div>
+    <br />
+    <button onclick="changedirection()">change direction</button>
+    <hr />
+    <p>Q8. What’s the difference between window vs document?</p>
+    <table border="boundryborder">
+      <tr><th>Document</th> <th>Window</th></tr>
+      <tr><td>It represents any HTML document or web page that is loaded in the browser.</td>
+      <td>It represents a browser window or frame that displays the contents of the webpage.  </td>
+      </tr>
+      <tr>
+        <td>It is loaded inside the window.</td>
+        <td>It is the very first object that is loaded in the browser.</td>
+      </tr>
+      <tr>
+        <td>It is the object of window property.</td>
+        <td>It is the object of the browser.</td>
+      </tr>
+      <tr>
+        <td>All the tags, elements with attributes in HTML are part of the document.</td>
+        <td>Global objects, functions, and variables of JavaScript are members of the window object.</td>
+      </tr>
+      <tr>
+        <td>We can access the document from a window using the window. document</td>
+        <td>We can access the window from the window only. i.e. window.window</td>
+      </tr>
+      <tr>
+        <td>The document is part of BOM (browser object model) and dom (Document object model)</td>
+        <td>The window is part of BOM, not DOM.</td>
+      </tr>
+      <tr>
+        <td>Properties of document objects such as title, body, cookies, etc can also be accessed by a window like this window. document.title</td>
+        <td>Properties of the window object cannot be accessed by the document object.</td>
+      </tr>
+      <tr>
+        <td><pre>syntax:
+
+          document.propertyname;</pre></td>
+          <td><pre>
+      syntax:
+      
+      window.propertyname;</pre></td>
+      </tr>
+      <tr>
+        <td><pre>example:
+
+          document.title :  will return the title of the document</pre></td>
+          <td><pre>example:
+
+            window.innerHeight : will return the height of the content area of the browser</pre></td>
+      </tr>
+    </table>
+    <hr />
+    <p>
+      Q9. Write code to implement timer clock using JS -- display HH:MM:SS --
+      the time should keep updating every second
+    </p>
+    <h1>start clock</h1>
+    <h1>Time </h1>
+    <hr>
+    <p>Q10. guess a number between 1 to 100 game? </p>
+    <a href="./index1.html">Play guess the number game</a>
+    <!-- <input type="number" /><button>check</button> -->
+    <script src="./script.js"></script>
+  </body>
+</html>
