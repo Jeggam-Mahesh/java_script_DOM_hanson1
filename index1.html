@@ -23,26 +23,17 @@
             <label for=""><b>Enter yor guessing number Number:</b></label><br>
     <input type="number" placeholder="Enter your number"><br>
     <button onclick="check()">check</button><br>
-    <b>Chances Left:</b><b></b><br>
-   <img src="./score.png" alt=""width="40px" height="30px"> <b ></b><br>
+    <b>Chances Left:</b>
+    <b></b><br>
+   <b></b><br>
     <mark></mark>
    
-    <!-- <button onclick="play()">play again</button> -->
         </div>
     </div>
-
-
-
-
-
-
-
-
-    <!-- <script src="./test.js"></script> -->
     <script>
         let randomnumber=Math.random()*100+1
    randomnumber=parseInt(randomnumber);
-  console.log(randomnumber)
+  console.log(randomnumber);
 let count=100;
 let chances=document.getElementsByTagName("b")
 chances[1].style.color="yellow"
@@ -55,18 +46,12 @@ let inputvl=document.querySelector("input");
     window.alert("enter a number between 1 to 100")
  }
  if(inputvl.value==randomnumber){
-    <!-- console.log() -->
     count--
     chances[2].innerHTML=`${count}`
-
-   // document.querySelector('mark').style.color="red"
     document.querySelector('mark').innerHTML=`  your guess ${randomnumber} is correct.. `
-    //window.confirm(` YOUR SCORE:${count}`)
-    document.querySelector('img').style.display="inline"
-  chances[3].style.color="orange"
-  
-    chances[3].innerHTML=` YOUR SCORE:${count}`
-    return 
+     chances[3].style.color="orange"
+    chances[3].innerHTML= ` 💯 YOUR SCORE:${count}`
+    
 }
 
 else if(inputvl.value>randomnumber){
@@ -83,19 +68,6 @@ chances[2].innerHTML=`${count}`
 
 }
 }
-/*function play(){
-    let randomnumber=Math.random()*100+1
-    randomnumber=parseInt(randomnumber);
-   console.log(randomnumber)
- let count=100;
- let chances=document.getElementsByTagName("b")
- chances[1].style.color="yellow"
- chances[1].innerHTML=`chances:`
- chances[2].style.color="white"
- chances[2].innerHTML=`${count}`
- 
- check();
-}*/
     </script>
 </body>
 </html>

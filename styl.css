@@ -64,12 +64,8 @@ b{
         font-weight: bolder;
         font-style: oblique;
      }
-     /* #bold{
-        color:orange
-     } */
-     img{
-        display:none;
-     }
+    
+     
      button{
         border: 2px solid black;
        background-color:deepskyblue;
